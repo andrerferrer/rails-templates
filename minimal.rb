@@ -37,9 +37,9 @@ RUBY
 
 # Procfile
 ########################################
-file 'Procfile', <<-YAML
-web: bundle exec puma -C config/puma.rb
-YAML
+# file 'Procfile', <<-YAML
+# web: bundle exec puma -C config/puma.rb
+# YAML
 
 # Assets
 ########################################
@@ -177,7 +177,4 @@ JS
   git :init
   git add: '.'
   git commit: "-m 'Initial commit with minimal template from https://github.com/lewagon/rails-templates'"
-
-  # Fix puma config
-  gsub_file('config/puma.rb', 'pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }', '# pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }')
 end
